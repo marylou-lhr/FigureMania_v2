@@ -2,6 +2,7 @@
 
 namespace Config;
 
+use CodeIgniter\Config\BaseConfig;
 use CodeIgniter\Config\Filters as BaseFilters;
 use CodeIgniter\Filters\Cors;
 use CodeIgniter\Filters\CSRF;
@@ -95,7 +96,7 @@ class Filters extends BaseFilters
      *
      * @var array<string, list<string>>
      */
-    public array $methods = [];
+    public array $methods = ['POST' => ['cstf']];
 
     /**
      * List of filter aliases that should run on any
